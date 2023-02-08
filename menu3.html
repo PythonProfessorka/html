@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Название документа</title>
+<style>
+#navbar ul {
+  display: none;
+  background-color: #f90;
+  position: absolute;
+  top: 100%;
+}
+#navbar li:hover ul { display: block; }
+#navbar, #navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#navbar {
+  height: 30px;
+  background-color: #666;
+  padding-left: 25px;
+  min-width: 470px;
+}
+#navbar li {
+  float: left;
+  position: relative;
+  height: 100%;
+}
+#navbar li a {
+  display: block;
+  padding: 6px;
+  width: 100px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+#navbar ul li { float: none; }
+#navbar li:hover { background-color: #f90; }
+#navbar ul li:hover { background-color: #666; }
+.container {
+  width: 100%;
+  max-width: 1024px; /*максимальная ширина может иметь другое значение*/
+  padding: 0 15px;
+  margin: 0 auto;
+}
+div{
+                margin: 10px;
+                border: 1px solid black;
+                font-size: 20px;
+                height: 80px;
+            }
+            #header{ 
+                background-color: #ccc;
+            }
+            #sidebar{
+    background-color: #ddd;
+    float: right;
+    width: 150px;
+}
+#main{
+    background-color: #eee;
+    height: 200px;
+    margin-right: 170px;
+}
+            #footer{ 
+                background-color: #ccc;
+            }
+</style>     
+</head>
+<body>
+    
+      <div id="header">Шапка сайта</div>
+      <ul id="navbar">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="#">Контакты</a>
+          <ul>
+            <li><a href="#">Адрес</a></li>
+            <li><a href="#">Телефон</a></li>
+            <li><a href="#">Email</a></li>
+          </ul>
+        </li>
+        <li><a href="#">О нас</a></li>
+      </ul>
+      <div id="sidebar">Сайбар</div>
+      <div id="main">Основное содержимое</div>
+      <div id="footer">Футер</div>
+      <script>
+        var colorArray = ["#5A9C6E", "#A8BF5A", "#FAC46E", "#FAD5BB", "#F2FEFF"]; // создаем массив с цветами фона
+        var i = 0; 
+        
+        function changeColor(){
+            document.body.style.background = colorArray[i]; 
+            i++;
+            if( i > colorArray.length - 1){
+                i = 0;
+            }
+        }
+        </script>
+        <button onclick="changeColor();">Change background</button>
+</body>
+  
